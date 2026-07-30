@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Person.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ex-my-first-model-java</a> &gt; <a href="index.source.html" class="el_package">ikerdevmodel</a> &gt; <span class="el_source">Person.java</span></div><h1>Person.java</h1><pre class="source lang-java linenums">package ikerdevmodel;
+
+import java.time.Year;
+
+/**
+ * Models a person with basic identity data and calculated age.
+ */
+public final class Person {
+
+    private static final int DEFAULT_YEAR_PLACEHOLDER = 1990;
+
+    private final String firstName;
+    private final String lastName;
+    private final String documentId;
+    private final int birthYear;
+
+    /**
+     * Creates a new Person.
+     *
+     * @param firstName the person's first name
+     * @param lastName the person's last name
+     * @param documentId the person's identity document number
+     * @param birthYear the person's year of birth
+     */
+<span class="fc" id="L25">    public Person(String firstName, String lastName, String documentId, int birthYear) {</span>
+<span class="fc" id="L26">        this.firstName = firstName;</span>
+<span class="fc" id="L27">        this.lastName = lastName;</span>
+<span class="fc" id="L28">        this.documentId = documentId;</span>
+<span class="fc" id="L29">        this.birthYear = birthYear;</span>
+<span class="fc" id="L30">    }</span>
+
+    public String getFirstName() {
+<span class="fc" id="L33">        return firstName;</span>
+    }
+
+    public String getLastName() {
+<span class="fc" id="L37">        return lastName;</span>
+    }
+
+    public String getDocumentId() {
+<span class="fc" id="L41">        return documentId;</span>
+    }
+
+    public int getBirthYear() {
+<span class="fc" id="L45">        return birthYear;</span>
+    }
+
+    /**
+     * Calculates the person's current age based on their birth year.
+     *
+     * @return the calculated age
+     */
+    public int getEdad() {
+<span class="fc" id="L54">        return Year.now().getValue() - birthYear;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
