@@ -50,7 +50,23 @@ ex-my-first-model-java/
 ├── pom.xml
 └── README.md
 ```
+## Diagrama de clase
 
+```mermaid
+classDiagram
+    class Person {
+        -String firstName
+        -String lastName
+        -String documentId
+        -int birthYear
+        +Person(firstName, lastName, documentId, birthYear)
+        +getFirstName() String
+        +getLastName() String
+        +getDocumentId() String
+        +getBirthYear() int
+        +getEdad() int
+    }
+```
 ## Pruebas de Test
 
 <img width="680" height="383" alt="Captura de pantalla 2026-07-30 144255" src="https://github.com/user-attachments/assets/9235a48d-1ae5-4cb0-8b33-5a86b55f9d92" />
